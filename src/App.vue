@@ -3,13 +3,11 @@ the-elevator
 </template>
 
 <script>
-import TheElevator from './components/TheElevator.vue'
+import TheElevator from "./components/TheElevator.vue";
 
 export default {
-  components: { 'the-elevator': TheElevator, }
-}
+  components: { "the-elevator": TheElevator },
+};
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

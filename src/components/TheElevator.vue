@@ -10,17 +10,16 @@
       :style="{ bottom: (floor - 1) * 20 + '%' }"
     ) {{ floor }}
   .elevator_buttons
-    button(
+    base-button(
       v-for="floor in 5"
       :key="floor"
       @click="addToQueue(floor)"
       :class="{ active: queue.includes(floor) }"
-      class="elevator_buttons_item"
     ) {{ floor }}
 </template>
 
 <script>
-
+import BaseButton from "./ui/BaseButton.vue";
 export default {
   data() {
     return {
@@ -62,7 +61,10 @@ export default {
         }
       }, speed);
     },
-  }
+  },
+  components: {
+    "base-button": BaseButton,
+  },
 };
 </script>
 
@@ -111,20 +113,6 @@ export default {
     display: flex;
     justify-content: center;
     gap: 15px;
-
-    &_item {
-      padding: 15px 20px;
-      font-size: 20px;
-      border-radius: 50px;
-      background-color: #60B8D1;
-      border: none;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #279CC6;
-        color: white;
-      }
-    }
   }
 
   &_arrow {

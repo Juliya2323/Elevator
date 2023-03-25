@@ -1,2 +1,2 @@
-# Elevator - to runn application use: 
+# Elevator - to run application use: 
 npm i / npm run serve
